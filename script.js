@@ -193,7 +193,7 @@ document.getElementById('donateBtn').addEventListener('click', () => {
     
     // Direct Mercado Pago link
     // Replace 'TU_LINK_DE_PAGO' with your actual Mercado Pago link
-    const mercadoPagoLink = 'link.mercadopago.com.ar/inggadielmalagrino';
+    const mercadoPagoLink = 'https://mpago.la/link.mercadopago.com.ar/inggadielmalagrino';
     
     window.open(mercadoPagoLink, '_blank');
     

@@ -438,48 +438,7 @@ body {
     color: rgba(255, 255, 255, 0.8);
 }
 
-.payment-methods {
-    margin-bottom: 2rem;
-}
 
-.payment-methods h4 {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-}
-
-.payment-icons {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.payment-method {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    transition: all 0.3s ease;
-}
-
-.payment-method:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
-}
-
-.payment-method svg {
-    width: 30px;
-    height: 30px;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.payment-method span {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
-}
 
 .donation-action {
     margin-top: 2rem;
@@ -632,10 +591,7 @@ body {
         align-items: center;
     }
     
-    .payment-icons {
-        flex-direction: column;
-        align-items: center;
-    }
+
     
     .custom-amount {
         flex-direction: column;
