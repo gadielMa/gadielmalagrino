@@ -142,7 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // Contact button click tracking
 document.querySelector('.btn-primary[href*="wa.me"]')?.addEventListener('click', () => {
     // You can add analytics tracking here if needed
-    console.log('WhatsApp contact initiated');
 });
 
 // Donation functionality
@@ -191,11 +190,8 @@ document.getElementById('donateBtn').addEventListener('click', () => {
         donor: 'Donante Anónimo'
     };
     
-    // Direct Mercado Pago link - DEBUG VERSION
-    const mercadoPagoLink = 'https://link.mercadopago.com.ar/inggadielmalagrino?v=' + Date.now();
-    
-    console.log('DEBUG: Opening link:', mercadoPagoLink);
-    alert('DEBUG: Abriendo link: ' + mercadoPagoLink);
+    // Direct Mercado Pago link
+    const mercadoPagoLink = 'https://link.mercadopago.com.ar/inggadielmalagrino';
     
     window.open(mercadoPagoLink, '_blank');
     

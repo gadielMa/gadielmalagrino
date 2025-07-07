@@ -8,7 +8,6 @@ Sitio web one-pager profesional para Gadiel Romualdo Malagrino, Ingeniero en Sis
 - 📱 Completamente responsivo
 - 🎨 Animaciones suaves y elegantes
 - 🖼️ Galería de imágenes integrada
-- 📞 Contacto directo por WhatsApp
 - ⚡ Optimizado para rendimiento
 
 ## Secciones
@@ -16,7 +15,6 @@ Sitio web one-pager profesional para Gadiel Romualdo Malagrino, Ingeniero en Sis
 2. **Sobre mi** - Información profesional y credenciales
 3. **Servicio** - Servicios ofrecidos con iconos
 4. **Galería** - Muestra de trabajos e imágenes
-5. **Contacto** - Información de contacto y WhatsApp
 
 ## Tecnologías Utilizadas
 - HTML5 semántico
@@ -42,7 +40,6 @@ Sitio web one-pager profesional para Gadiel Romualdo Malagrino, Ingeniero en Sis
 4. ¡Listo! El sitio está funcionando
 
 ## Contacto
-- **WhatsApp**: +54 9 11 5490 7428
 - **Servicio**: Desarrollo web, software a medida, programación full stack
 
 ## Licencia
