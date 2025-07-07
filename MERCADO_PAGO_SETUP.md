@@ -176,7 +176,7 @@ Crea páginas para manejar los resultados del pago:
 
 ```javascript
 // Versión simple con link directo
-const mercadoPagoLink = 'https://mpago.la/TU_LINK_DE_PAGO';
+const mercadoPagoLink = 'link.mercadopago.com.ar/inggadielmalagrino';
 window.open(mercadoPagoLink, '_blank');
 ```
 

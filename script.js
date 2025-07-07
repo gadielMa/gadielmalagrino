@@ -191,12 +191,11 @@ document.getElementById('donateBtn').addEventListener('click', () => {
         donor: 'Donante Anónimo'
     };
     
-    // For now, redirect to WhatsApp with donation info
-    // Later you can integrate with Mercado Pago API
-    const message = `Hola Gadiel! Me gustaría hacer una donación de $${selectedAmount} ARS para apoyar tu trabajo. ¿Podrías enviarme el link de Mercado Pago?`;
-    const whatsappUrl = `https://wa.me/5491154907428?text=${encodeURIComponent(message)}`;
+    // Direct Mercado Pago link
+    // Replace 'TU_LINK_DE_PAGO' with your actual Mercado Pago link
+    const mercadoPagoLink = 'link.mercadopago.com.ar/inggadielmalagrino';
     
-    window.open(whatsappUrl, '_blank');
+    window.open(mercadoPagoLink, '_blank');
     
     // Analytics tracking
     console.log('Donation initiated:', donationData);
