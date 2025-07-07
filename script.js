@@ -191,11 +191,8 @@ document.getElementById('donateBtn').addEventListener('click', () => {
         donor: 'Donante Anónimo'
     };
     
-    // Direct Mercado Pago link - DEBUG VERSION
-    const mercadoPagoLink = 'https://link.mercadopago.com.ar/inggadielmalagrino?v=' + Date.now();
-    
-    console.log('DEBUG: Opening link:', mercadoPagoLink);
-    alert('DEBUG: Abriendo link: ' + mercadoPagoLink);
+    // Direct Mercado Pago link
+    const mercadoPagoLink = 'https://link.mercadopago.com.ar/inggadielmalagrino';
     
     window.open(mercadoPagoLink, '_blank');
     
