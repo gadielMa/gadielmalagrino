@@ -143,4 +143,91 @@ document.addEventListener('DOMContentLoaded', () => {
 document.querySelector('.btn-primary[href*="wa.me"]')?.addEventListener('click', () => {
     // You can add analytics tracking here if needed
     console.log('WhatsApp contact initiated');
-}); 
+});
+
+// Donation functionality
+let selectedAmount = 0;
+
+// Amount button selection
+document.querySelectorAll('.amount-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
+        
+        // Add active class to clicked button
+        btn.classList.add('active');
+        
+        // Set selected amount
+        selectedAmount = parseInt(btn.dataset.amount);
+        
+        // Clear custom amount input
+        document.getElementById('customAmount').value = '';
+    });
+});
+
+// Custom amount input
+document.getElementById('customAmount').addEventListener('input', (e) => {
+    const customAmount = parseInt(e.target.value);
+    
+    if (customAmount && customAmount >= 100) {
+        selectedAmount = customAmount;
+        
+        // Remove active class from all amount buttons
+        document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
+    }
+});
+
+// Donation button click
+document.getElementById('donateBtn').addEventListener('click', () => {
+    if (!selectedAmount || selectedAmount < 100) {
+        alert('Por favor selecciona un monto mínimo de $100 ARS');
+        return;
+    }
+    
+    // Create Mercado Pago payment link
+    const donationData = {
+        amount: selectedAmount,
+        description: `Donación para Gadiel Malagrino - $${selectedAmount} ARS`,
+        donor: 'Donante Anónimo'
+    };
+    
+    // For now, redirect to WhatsApp with donation info
+    // Later you can integrate with Mercado Pago API
+    const message = `Hola Gadiel! Me gustaría hacer una donación de $${selectedAmount} ARS para apoyar tu trabajo. ¿Podrías enviarme el link de Mercado Pago?`;
+    const whatsappUrl = `https://wa.me/5491154907428?text=${encodeURIComponent(message)}`;
+    
+    window.open(whatsappUrl, '_blank');
+    
+    // Analytics tracking
+    console.log('Donation initiated:', donationData);
+});
+
+// Mercado Pago Integration (Template for future implementation)
+function initializeMercadoPago() {
+    // This is where you would initialize Mercado Pago SDK
+    // You'll need to get your Public Key from Mercado Pago dashboard
+    
+    /*
+    const mp = new MercadoPago('YOUR_PUBLIC_KEY', {
+        locale: 'es-AR'
+    });
+    
+    function createPayment(amount) {
+        fetch('/create-payment', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                amount: amount,
+                description: `Donación para Gadiel Malagrino - $${amount} ARS`
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Redirect to Mercado Pago checkout
+            window.location.href = data.init_point;
+        });
+    }
+    */
+} 
